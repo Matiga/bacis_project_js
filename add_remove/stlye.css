@@ -1,0 +1,21 @@
+.container{
+    text-align: center;
+}
+.remove{
+    font-size: 2rem;
+    color:green;
+    font-family: "Lucida Sans";
+    text-decoration:overline;
+    text-transform: uppercase;
+    text-transform:capitalize;
+}
+button{
+    font-size: 1.5rem;
+    padding:.3rem;
+    border-radius: 10px;
+    background-color: green;
+    color:#fff;
+}
+.adding{
+    color:red;
+}
