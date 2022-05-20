@@ -1,15 +1,13 @@
-const logo = document.getElementById('myImg');
-const imgModal = document.getElementById('imgModal');
-const close = document.getElementById('close');
-const img= document.getElementById('img');
-const description= document.getElementById('description');
+const moves = document.getElementById("move");
+const images = document.querySelectorAll("img");
 
-logo.addEventListener('click',()=>{
-    imgModal.style.display='block';
-    description.innerHTML = "Our Services";
-    img.src="images/2.png";
-});
- close.addEventListener('click',()=>{
-     imgModal.style.display="none";
- })
+let start = 0;
+function move(){
+    start++
+    if(start>images.length-1){
+        start=0;
+    }
+    moves.style.transform   =`translateX(${-start*80}%)`;
+}
+setInterval(move,2000)
 
