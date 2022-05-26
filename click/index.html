@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Layout</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="stlye.css">
+</head>
+<body>
+    <h1>FAQ</h1>
+    <div id="qeus">What is the capital of Canada?</div>
+        <p id="ans">The capital of Canada is Ottawa, Ontario</p>
+    
+    <div id="qeus">how many states are in Canada?</div>
+        <p id="ans">None.Canada has 10 provinces and 3 territories.</p>
+    
+    <div id="qeus">how many oceans Canada?</div>
+        <p id="ans">Three</p>
+    
+<!--<script src="script.js"></script>-->
+<script>
+    
+    let answers = document.querySelectorAll('#ans');
+    let questions = document.querySelectorAll('#qeus');
+        
+answers.forEach(el=>{
+        //answer.forEach(function(el){})
+        el.style.display = 'none';
+    })
+questions.forEach(el=>{
+    el.onclick = ()=>{
+        if(el.nextSibling.nextSibling.style.display === 'none'){
+            el.nextSibling.nextSibling.style.display ='block'
+        }else{
+            el.nextSibling.nextSibling.style.display='none'
+        }
+    }
+})
+    
+</script>   
+</body>
+</html>
